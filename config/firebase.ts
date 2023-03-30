@@ -1,7 +1,7 @@
 
 import { getApp, getApps, initializeApp } from 'firebase/app'
 import { getFirestore } from 'firebase/firestore'
-import { getAuth, GoogleAuthProvider } from 'firebase/auth'
+import { getAuth, GoogleAuthProvider ,GithubAuthProvider} from 'firebase/auth'
 
 
 // TODO: Replace the following with your app's Firebase project configuration
@@ -23,6 +23,6 @@ const db = getFirestore(app)
 
 const auth = getAuth(app)
 
-const provider = new GoogleAuthProvider()
-
-export { db, auth, provider }
+const providerGoogle = new GoogleAuthProvider()
+const providerGithub = new GithubAuthProvider();
+export { db, auth, providerGoogle ,providerGithub}
